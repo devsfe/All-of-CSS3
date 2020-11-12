@@ -1,0 +1,58 @@
+/* === Default Reset's === */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;    
+}
+
+li,ul,ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* === Fonts Reset's === */
+
+h1,h2 {
+    font-weight: 400;
+}
+
+p {
+    font-weight: 300;
+}
+
+a,p {
+    font-size: 1rem;
+}
+
+
+@media(max-width: 600px) {
+    a,p {font-size: 0.875rem}
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+@media(max-width: 1225px) {
+    h1 {font-size: 2rem;}
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+@media(max-width: 1225px) {
+    h2 {font-size: 1.5rem;}
+}
+

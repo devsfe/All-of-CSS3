@@ -1,0 +1,367 @@
+/*** Reset's e Varíaveis ***/
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    list-style: none;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+a,p {
+    font-size: 0.813rem;
+}
+
+:root {
+    --secondary-color: #3d3635;
+    --tertiary-color: #ffffff;
+    --main-color: #6f4e37;
+    --hover-main-color: #3d2b1e;
+}
+
+/*** Containers/Wrappers ***/
+.blog-container {
+    display: grid;
+    grid-template-columns: 2fr 4fr;
+    align-items: start;
+    gap: 20px;
+}
+
+.post-icon-wrapper {
+    font-size: 0.688rem;
+    color: var(--secondary-color);
+    margin: 0 0.313em 0 0;
+}
+
+.post-icon-wrapper a {
+    color: var(--secondary-color);
+    font-size: 0.688rem;
+}
+
+.post-icon-wrapper i {
+    margin-right: 0.313em;
+}
+
+.padding-container {
+    margin: 0 auto;
+}
+
+@media(max-width: 2800px) {
+    .padding-container {
+        padding: 0 100px;
+    }
+}
+
+@media(max-width: 1980px) {
+    .padding-container {
+        padding: 0 160px;
+    }
+}
+
+@media(max-width: 1024px) {
+    .padding-container {
+        padding: 0 60px;
+    }
+}
+
+@media(max-width: 768px) {
+    .padding-container {
+        padding: 0 20px;
+    }
+}
+
+.default-hr {
+    width: 100%;
+    height: 1px;
+    background-color: #e6e6e6;
+    margin-bottom: 1.25em;    
+}
+
+/*** Header ***/
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1.875em 0 1.875em 0;
+}
+
+.nav-logo {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.2ch;
+    color: var(--secondary-color);
+}
+
+nav select {
+    display: none;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav-list {
+    margin: 0 1.25em 0 0;
+}
+
+.nav-link {
+    color: var(--main-color);
+    font-weight: 900;
+    font-size: 0.875rem;
+    padding: 0.5em 0.625em;
+}
+
+.nav-link:hover {
+    background-color: var(--hover-main-color);
+    color: var(--tertiary-color);
+    border-radius: 5px;
+    transition: all ease 0.3s;
+}
+
+.nav-list a i { 
+    margin-right: 0.5em;
+}
+
+.dropdown-menu {
+    position: absolute;
+    min-width: 150px;
+    opacity: 0.0;
+    transition: all 400ms ease-in-out;   
+    background: #2b2a27;
+    visibility: hidden;
+    height: auto;
+    margin-top: 0.625em;
+}
+
+.dropdown-list {
+    border-bottom: 1px dotted;
+}
+
+.dropdown-list:hover {
+    transform: scale(1.1);
+    background-color: #121110;
+}
+
+.dropdown-link {
+    display: block;
+    line-height: 40px;
+    color: var(--tertiary-color);
+    margin-left: 0.625em;
+}
+
+.nav-link:hover + .dropdown-menu,
+.dropdown-menu:hover {
+    opacity: 1.0;
+    visibility: visible;
+}
+
+.search-nav {
+    background: var(--main-color);
+    padding: 1.875em 0 1.875em 0;
+}
+
+.search-nav-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.search-nav-links {
+    margin-bottom: 0.625em;
+}
+
+.search-nav i,
+.search-nav a {
+    font-size: 0.813rem;
+}
+
+.search-nav i {
+    font-weight: 600;
+    color: var(--tertiary-color);
+}
+
+.search-nav a {  
+    color: var(--tertiary-color);
+    font-style: italic;
+}
+
+#search-form {
+    border: none;
+    padding: 6px 15px;
+    outline: none;
+}
+
+.search-btn {
+    padding: 7px;
+    background-color: #383028;
+    color: var(--tertiary-color);
+    cursor: pointer;
+    outline: none;
+}
+
+/*** Blog ***/
+#blog {
+    padding: 2.5em 0;
+}
+
+/*** Sidebar ***/
+.sidebar {
+    padding: 1.25em;
+    background-color: #f7fff9;
+    border: 1px solid #e6e6e6;
+}
+
+.sidebar-categories,
+.sidebar-posts {
+    margin-bottom: 1.25em;
+}
+
+.sidebar-categories h3,
+.sidebar-posts h3,
+.sidebar-tags h3 {
+    margin-bottom: 0.625em;
+    color: var(--secondary-color);
+}
+
+.sidebar-category-link {
+    display: inline-block;
+    color: var(--secondary-color);
+    font-weight: 400;
+    margin-bottom: 1.25em;
+    margin-left: 0.313em;
+}
+
+.sidebar-post {
+    margin-bottom: 1.25em;
+}
+
+.sidebar-post-link {
+    display: inline-block;
+    color: #000000;
+    font-weight: 600;
+    margin-bottom: 0.313em;
+}
+
+.sidebar-category-link:hover,
+.sidebar-post-link:hover {
+    color: #0066CC;
+}
+
+.sidebar-tag {
+    padding: 6px 15px;
+    background-color: var(--main-color);
+    color: var(--tertiary-color);
+    border-radius: 3px;
+    display: inline-block;
+    margin-bottom: 0.313em;
+}
+
+
+/*** Blog-Posts ***/
+.blog-post h3 {
+    margin-bottom: 1.25em;
+    color: var(--secondary-color);
+}
+
+.blog-post img {
+    max-width: 100%;
+    height: 350px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.blog-post-details {
+    margin: 0.938em 0 0.625em 0;
+}
+
+.blog-post p {
+    margin-bottom: 0.938em;
+}
+
+.blog-post-btn {
+    padding: 6px 15px;   
+    background-color: var(--main-color); 
+    color: var(--tertiary-color);
+    border-radius: 2px;
+    display: inline-block;
+    margin-bottom: 2.5em;
+}
+
+.blog-post-btn:hover {
+    background-color: var(--hover-main-color);
+}
+
+.page-navigation {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.page-navigation li a {
+    padding: 5px 12px;
+    border: 1px solid #dddddd;
+    color: var(--secondary-color);
+}
+
+.page-navigation li a:hover {
+    background-color: var(--hover-main-color);
+    color: var(--tertiary-color);
+}
+
+/*** Footer ***/
+footer {
+    padding: 1.25em 0;
+    background: #3d2b1e;
+}
+
+.footer-copy {
+    margin-bottom: 0.625em;
+    color: #f0e9e4;
+    text-align: center;
+}
+
+.footer-copy a {
+    color: #000000;
+    font-size: 1rem;
+}
+
+/*** Responsive ***/
+@media(max-width: 800px) {
+    .blog-container {
+        grid-template-columns: 1fr;        
+    }
+
+    nav select {
+        display: inline-block;
+        padding: 5px 0;
+        border: 1px solid #cccccc;
+        border-radius: 4px;
+        width: 70%;
+    }
+
+    option {
+        display: block;
+        white-space: pre;
+        min-height: 1.2em;
+        padding: 0px 2px 1px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+}
+
+@media(max-width: 600px) {
+    .page-navigation li a {
+        padding: 2px 12px;
+    }
+}

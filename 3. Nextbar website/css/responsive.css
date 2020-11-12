@@ -1,0 +1,377 @@
+/* === Navbar === */ 
+@media(max-width: 1024px) {
+    .nav {
+        padding: 20px 60px;
+    }
+
+    .nav .reservations-button {
+        display: none;
+    }
+
+    .nav-links {
+        display: none;
+    }
+}
+
+@media(max-width: 768px) {
+    .nav {
+        padding: 20px 40px;
+    }
+}
+
+@media(max-width: 600px) {
+    .nav {
+        padding: 20px;
+    }
+}
+
+/* === Menu Mobile === */ 
+@media(max-width: 1024px) {
+
+    #check:checked ~ .menu-mobile {
+        right: 0;
+    }
+
+    #check:checked ~ .menu-bars:before {
+        content: "\f00d  "; 
+        font-family: FontAwesome;
+    }   
+
+    .menu-bars:before {
+        content: "\f0c9"; 
+        font-family: FontAwesome;  
+        position: fixed;
+        z-index: 1003;
+        top: 20px;
+        right: 60px;
+        cursor: pointer;
+        color: #ffffff;
+        font-size: 36px;
+        line-height: 42px;
+        font-weight: 300;
+    }
+
+    @media(max-width: 768px) {
+        .menu-bars:before {
+            right: 40px;
+        }
+    }
+    
+    @media(max-width: 600px) {
+        .menu-bars:before {
+            right: 20px;
+        }
+    }
+
+    .menu-links {
+        margin-top: 20px;
+    }
+    
+    .menu-mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: fixed;
+        right: -100%;
+        z-index: 1002;
+        text-align: center;
+        width: 50%;
+        height: 100vh;
+        background-color: #0f0f0f;
+        transition: linear 0.4s;
+    }
+    
+    .menu-link{
+        margin: 0 0 20px 0;
+    }
+
+    .menu-link a{
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 16px;
+        color: #FFFFFF;
+    }
+
+    .menu-mobile .reservations-button {
+        padding: 15px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 50px;
+        text-align: center;
+        white-space: nowrap;
+    }
+}
+
+@media(max-width: 600px) {
+    .menu-mobile {
+        width: 100%;     
+    }
+
+    .menu-mobile .reservations-button {
+        padding: 10px;
+    }
+}
+
+
+/* === Home === */
+@media(max-width: 768px) {
+    .home-text h1 {
+        font-size: 48px;
+    }
+
+    .home-text p {
+        max-width: 75ch;
+    }
+}
+
+@media(max-width: 600px) {
+    .home-text h1 {
+        font-size: 36px;
+    }
+
+    .home-text p {
+        font-size: 12px;
+        max-width: 50ch;
+    }
+}
+
+/* === About === */
+@media(max-width: 1335px) {
+    .about-container {
+        flex-direction: column;  
+        align-items: center;
+        padding: 60px 40px;
+    }
+
+    .about-box {
+        margin-bottom: 20px;
+        width: 90%;
+        position: relative;
+        left: 0;
+    }
+
+    .about-image {
+        display: flex;
+        justify-content: center; 
+        width: 90%; 
+    }
+
+    .about-image img {
+        max-width: 100%;
+        height: 500px;  
+    }
+
+}
+
+@media(max-width: 800px) {
+    .about-container {
+        padding: 60px 40px;
+    }
+    .about-box {
+        margin-bottom: 80px;
+        padding: 60px 20px 60px 0px;
+    }  
+    
+    .about-image img {
+        height: 400px;  
+    }
+}
+
+@media(max-width: 600px) {
+    .about-container {
+        padding: 60px 20px;       
+    }
+}
+
+/* === Hero-Img === */
+@media(max-width: 769px) {
+    .hero-img-txt h2 {
+        font-size: 48px;
+    }
+}
+
+@media(max-width: 600px) {
+    .hero-img-txt h2 {
+        font-size: 36px;
+    }
+
+    .hero-img-txt p {
+        font-size: 12px;
+        max-width: 50ch;
+        text-align: center;
+    }
+}
+
+/* === Menu === */
+@media(max-width: 1024px) {
+    .menu-container {
+        padding: 60px;
+    }
+
+    .menu-items-container {
+        grid-template-columns: auto auto;  
+    }
+
+}
+
+@media(max-width: 768px) {
+    .menu-container {
+        padding: 60px 40px;
+    }
+
+    .menu-logo h2 {
+        font-size: 32px;
+    }
+
+    .menu-items-container {
+        grid-template-columns: auto;  
+    }
+}
+
+@media(max-width: 600px) {
+    .menu-container {
+        padding: 60px 20px;
+    }
+
+    .menu-logo h2 {
+        font-size: 24px;
+    }
+}
+
+/* === Contact === */
+@media(max-width: 1024px) {
+    .contact-container {
+        padding: 60px;        
+    }
+
+    .contact-items {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 8vh;
+    }
+}
+
+@media(max-width: 768px) {
+    .contact-container {
+        padding: 60px 40px;
+    }
+}
+
+@media(max-width: 600px) {
+    .contact-container {
+        padding: 60px 20px;        
+    }
+
+    .contact-items {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .contact-subtitle,
+    .contact-icon {
+        font-size: 24px;
+    }
+
+    .contact-paragraph {
+        font-size: 18px;
+    }
+}
+
+/* === Footer === */ 
+@media(max-width: 1024px) {
+    .footer-container {
+        padding: 60px; 
+    }
+}
+
+@media(max-width: 768px) {
+    .footer-container {
+        padding: 60px 40px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 600px) {
+    .footer-container {
+        padding: 60px 20px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .footer-contact-paragraph {
+        margin-bottom: 30px;
+    }
+
+    .footer-copy-text,
+    .footer-text-paragraph,
+    .footer-contact-subtitle,
+    .footer-contact-paragraph {
+        font-size: 14px
+    }
+}
+
+
+/* === Blog === */
+@media(max-width: 1335px) {
+    .blog-container {
+        align-items: center;
+        justify-content: center;
+    }
+    .blog-img {
+        width: 100%;
+        height: 300px; 
+    }
+
+    .post-box {
+        position: static;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .blog-post-left {
+        padding-right: 0;
+    }
+
+    .post-paragraph {
+        max-width: 100%;
+    }
+} 
+
+@media(max-width: 1024px) {
+    .blog-container {
+        padding: 120px 60px;         
+    }
+}
+
+
+@media(max-width: 768px) {
+    .blog-container {
+        padding: 120px 40px;         
+    }
+
+    .blog-title {
+        font-size: 48px;
+    }
+
+    .post-box {
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 600px) {
+    .blog-container {
+        padding: 120px 20px;         
+    }
+
+    .blog-title {
+        font-size: 36px;
+    }
+
+    .post-paragraph {
+        font-size: 14px;
+    }
+}
+
+
+
+
+
+
